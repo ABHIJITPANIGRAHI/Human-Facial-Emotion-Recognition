@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>login</title>
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./stylesheets/lo.css">
+</head>
+<body>
+	<div class="login_box">
+		<center>
+		<h1>LOGIN</h1>
+		</center>
+		<input type="text" name="username" id="username" placeholder="username">
+		<br>
+		<br>
+		<input type="password" name="password" id="password" placeholder="password">
+		<br>
+		<br>
+		<button id="submit">LOGIN</button>
+		<center>
+		<p>need account <a href="/signup">Signup</a></p>
+		</center>
+	</div>
+	<script
+  src="http://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript">
+  	$(document).ready(function(){
+  		$("#submit").click(function(){
+  			var user={'username':$("#username").val(),
+  					   'password':$("#password").val()
+  		};
+  		$.ajax({
+  			url:"/login",
+  			method:"post",
+  			data:user,
+  			success:function(data){
+  				window.location=data;
+  			}
+  		});
+  		});
+  	});
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+body{
+	background-color: rgb(24,24,24);
+	background-size: cover;
+	color: white;
+}
+h1{
+font-family: 'Libre Barcode 39 Text', cursive;
+font-size: 60px;
+font-weight:lighter; 
+}
+button{
+	right:20px;
+	margin-top: 20px;
+	margin-right: 30px;
+	top: 0;
+	right: 0;
+	position: absolute;
+	border:none;
+	outline: none;
+	height: 40px; 
+}
+ button:hover{
+	cursor: pointer;
+	background-color: white;
+	color:#141415;
+}
